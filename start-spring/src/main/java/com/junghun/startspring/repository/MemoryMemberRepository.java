@@ -6,6 +6,7 @@ import java.util.*;
 
 public class MemoryMemberRepository implements  MemberRepository{
 
+    //store : static이기 때문에 싱글톤 패턴에 의해 하나의 인스턴스만 생성
     private static Map<Long,Member> store = new HashMap<>();
     private static long sequence = 0L; //시스템에 저장하기위한 id(순서로)
 
