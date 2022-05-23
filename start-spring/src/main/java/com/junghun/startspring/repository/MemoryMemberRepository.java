@@ -1,9 +1,9 @@
 package com.junghun.startspring.repository;
 
 import com.junghun.startspring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
-
 public class MemoryMemberRepository implements  MemberRepository{
 
     //store : static이기 때문에 싱글톤 패턴에 의해 하나의 인스턴스만 생성
