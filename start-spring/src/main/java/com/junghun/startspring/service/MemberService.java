@@ -5,16 +5,17 @@ import com.junghun.startspring.repository.MemberRepository;
 import com.junghun.startspring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 //command+shift+t -> Test코드를 만들어줌
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     };
