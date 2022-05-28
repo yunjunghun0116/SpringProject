@@ -2,7 +2,10 @@ package com.junghun.startspring.service;
 
 import com.junghun.startspring.domain.Member;
 import com.junghun.startspring.repository.MemberRepository;
+import com.junghun.startspring.repository.MemoryMemberRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,7 +23,7 @@ public class MemberServiceIntegrationTest {
     void register(){
         //given
         Member member = new Member();
-        member.setName("springTest");
+        member.setName("spring");
 
         //when
         Long saveId = memberService.join(member);

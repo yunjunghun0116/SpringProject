@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let loginFunction = (id,pw) => {
+            //로그인작업
+            window.postMessage({
+                'id':id,
+                'password':pw,
+                'name': name,
+                'index':123,
+                'success':true,
+            });
+        };
+        const back = () => {
+            return window.location.pathname === '/' ? true : false;
+        }
+    </script>
+</head>
+<body>
+    <button name="setNative" onclick=loginFunction('123','456')>로그인</button>
+    <button name="closePage" onclick=loginFunction('123','456')>뒤로가기</button>
+</body>
+</html>
